@@ -17,28 +17,41 @@ public class Book : MonoBehaviour
     public GameObject BookInterface; // Book interface
 
     public string bookChoices; // Allows you to choose which book
-    public int bundleNumber = 0; // Allows you to choose the bundle number
+    private int _currentPage = 0;
+    private AssetBundle _previousBundle;
+    private AssetBundle _currentBundle;
+    private AssetBundle _nextBundle;
+    public int TotalPages = 5;
 
-    private int totalBundles = 2; // Total number of bundles in the textbook
-	private int localCurrentPage; // Keeps track of the current page in the asset bundle: 0-9
-	private int globalCurrentPage; // Keeps track of the current page in the textbook: 0-x
-    private AssetBundle currentBundle; // Holds the current bundle
+    /* Returns the current number of pages loaded in the scene */
+    private int TotalPageCount()
+    {
+        return TotalPages;
+    }
 
     /* Loads the current set of 10 pages from the current asset bundle*/
-    private AssetBundle LoadBundle()
+    private AssetBundle LoadBundle(int pageNumber)
     {
-    	string bundleCreation = bookChoices + "-" + bundleNumber.ToString(); // Creates the bundle name
-        AssetBundle bundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, bundleCreation)); // Gets the bundle
 
-        // Loads the pages
-        for(int i = 0; i < 10; i++){
-            int temp = i + bundleNumber*10;
-            string str = temp.ToString();
-            var page = Instantiate(bundle.LoadAsset<GameObject>(str), BookInterface.transform.position, BookInterface.transform.rotation); // Places the book in the scene
-            page.transform.parent = Parent.transform; // Makes Book the parent of page
-            page.transform.Rotate(0,180,0); // Rotates the page to correct position
-        }
+        string bundleCreation = bookChoices + "-" + pageNumber.ToString(); // Creates the bundle name
+        Debug.Log(bundleCreation);
+        AssetBundle bundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, bundleCreation)); // Gets the bundle
+      
         return bundle;
+    }
+    private void InstantiateObject(int sibIndex, AssetBundle bundle, int pageNumber)
+    {
+        string str = pageNumber.ToString();
+        var page = Instantiate(bundle.LoadAsset<GameObject>(str), BookInterface.transform.position, BookInterface.transform.rotation); // Places the book in the scene
+        page.transform.parent = Parent.transform;
+        page.transform.Rotate(0, 180, 0);
+
+        if (sibIndex != -1)
+        {
+            page.transform.SetSiblingIndex(sibIndex);
+        }
+        
+
     }
 
     /* Updates the current page displayed*/
@@ -47,120 +60,103 @@ public class Book : MonoBehaviour
         // Makes any page other than current invisible and makes current visible
         foreach (Transform child in transform)
         {
-            int index = child.GetSiblingIndex();
-            if (index+bundleNumber*10 != globalCurrentPage)
-            {
-                child.gameObject.SetActive(false);
-            }
-            else
+            string name = child.name;
+            string num = name.Split('(')[0];
+            int index = 0;
+            Int32.TryParse(num, out index);
+            if (index == _currentPage)
             {
                 child.gameObject.SetActive(true);
             }
+            else
+            {
+                child.gameObject.SetActive(false);
+            }
         }
     }
 
-    /* Removes pages from scene */
-    public void DestoryPages()
-    {
-        foreach (Transform child in transform)
-        {
-            Destroy(child.gameObject);
+    private int NextPage(int currentPage) {
+        if (currentPage == TotalPageCount() - 1) {
+            return 0;
+        } else {
+            currentPage++;
+            return currentPage;
         }
     }
 
-    /* Returns the current number of pages loaded in the scene */
-    private int TotalPageCount()
-    {
-        return transform.childCount;
+    private int PreviousPage(int currentPage) {
+        if (currentPage == 0) {
+            return TotalPageCount() - 1;
+        } else {
+            currentPage--;
+            return currentPage;
+        }
     }
 
     /* Goes to the next page */
     public void TurnNextPage()
     {
-        /* 
-        Checks if on the last page in the current bundle
-        If so goes to the next bundle, if not just turns page
-        */
-        if (localCurrentPage + 1 > TotalPageCount()-1)
-        {   
-            /* 
-            Checks if the bundle is the last bundle in the textbook
-            If so goes to first bundle, if not goes to next bundle
-            */ 
-            if (bundleNumber < totalBundles - 1)
-            {
-                bundleNumber += 1;
-                globalCurrentPage += 1;
-            }
-            else
-            {
-                bundleNumber = 0;
-                globalCurrentPage = 0;
-            }
+        _currentPage = NextPage(_currentPage);
 
-            localCurrentPage = 0;
-            DestoryPages(); // Removes pages from scene
-            currentBundle.Unload(false); // Unloads bundle memory
-            currentBundle = LoadBundle(); // Loads the next bundle
-        }
-        else
-        {
-            localCurrentPage += 1;
-            globalCurrentPage += 1;
-        }
+        GameObject toDestroy = transform.GetChild(0).gameObject;
+        Destroy(toDestroy);
+        _previousBundle.Unload(false);
 
+        _previousBundle = _currentBundle;
+        _currentBundle = _nextBundle;
+        _nextBundle = LoadBundle(NextPage(_currentPage));
+        InstantiateObject(-1, _nextBundle, NextPage(_currentPage));
         UpdatePages();
-
-        Debug.Log(localCurrentPage);
-        Debug.Log(globalCurrentPage);
     }
 
     /* Goes back a page */
     public void TurnBackPage()
-    {   
-        /* 
-        Checks if on the first page in the current bundle
-        If so goes to the next bundle, if not just goes back one page
-        */
-    	if (localCurrentPage - 1 < 0)
-        {
-            /* 
-            Checks if the bundle is the first bundle in the textbook
-            If so goes to last bundle, if not goes back one bundle
-            */ 
-            if (bundleNumber > 0)
-            {
-                bundleNumber -= 1;
-                globalCurrentPage -= 1;
-            }
-            else
-            {
-                bundleNumber = totalBundles-1;
-                globalCurrentPage = totalBundles*10-1;
-            }
+    {
+        _currentPage = PreviousPage(_currentPage);
 
-            localCurrentPage = 9;
-            DestoryPages(); // Removes pages from scene
-            currentBundle.Unload(false); // Unloads bundle memory
-            currentBundle = LoadBundle(); // Loads the next bundle
-        }
-        else
-        {
-            localCurrentPage -= 1;
-            globalCurrentPage -= 1;
-        }
+        GameObject toDestroy = transform.GetChild(2).gameObject;
+        Destroy(toDestroy);
+        _nextBundle.Unload(false);
 
+        _nextBundle = _currentBundle;
+        _currentBundle = _previousBundle;
+        _previousBundle = LoadBundle(PreviousPage(_currentPage));
+        InstantiateObject(0, _previousBundle, PreviousPage(_currentPage));
         UpdatePages();
+    }
 
-        Debug.Log(localCurrentPage);
-        Debug.Log(globalCurrentPage);
+    public void GoToPage(int pageNumber)
+    {
+        _currentPage = pageNumber;
+
+        foreach(Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+        _previousBundle.Unload(false);
+        _currentBundle.Unload(false);
+        _nextBundle.Unload(false);
+
+        _previousBundle = LoadBundle(PreviousPage(_currentPage));
+        InstantiateObject(0, _previousBundle, PreviousPage(_currentPage));
+        _currentBundle = LoadBundle(_currentPage);
+        InstantiateObject(1, _currentBundle, _currentPage);
+        _nextBundle = LoadBundle(NextPage(_currentPage));
+        InstantiateObject(2, _nextBundle, NextPage(_currentPage));
+        UpdatePages();
     }
 
 
-	/* Checks for saved progress and displays pages */
-	void Start()
-	{
-        currentBundle = LoadBundle();
+    /* Checks for saved progress and displays pages */
+    void Start()
+    {
+        _previousBundle = LoadBundle(PreviousPage(_currentPage));
+        InstantiateObject(0, _previousBundle, PreviousPage(_currentPage));
+        _currentBundle = LoadBundle(_currentPage);
+        InstantiateObject(1, _currentBundle, _currentPage);
+        _nextBundle = LoadBundle(NextPage(_currentPage));
+        InstantiateObject(2, _nextBundle, NextPage(_currentPage));
         UpdatePages();
-	}
+    }
+
 }
