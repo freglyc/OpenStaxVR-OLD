@@ -1248,6 +1248,11 @@ extern const uint32_t Object_CompareBaseObjects_m2405226032_MetadataUsageId;
 extern const uint32_t Object_IsNativeObjectAlive_m3095908075_MetadataUsageId;
 extern const uint32_t Object_get_name_m4211327027_MetadataUsageId;
 extern const uint32_t Object_set_name_m291480324_MetadataUsageId;
+extern RuntimeClass* ScriptableObject_t2528358522_il2cpp_TypeInfo_var;
+extern const RuntimeMethod* Object_Instantiate_m2682941528_RuntimeMethod_var;
+extern String_t* _stringLiteral2475671027;
+extern String_t* _stringLiteral1766417507;
+extern const uint32_t Object_Instantiate_m2682941528_MetadataUsageId;
 extern const uint32_t Object_Destroy_m565254235_MetadataUsageId;
 extern const uint32_t Object_DestroyImmediate_m3193525861_MetadataUsageId;
 extern const RuntimeMethod* Object_CheckNullArgument_m4237608654_RuntimeMethod_var;
@@ -1256,6 +1261,7 @@ extern const uint32_t Object_FindObjectOfType_m67275058_MetadataUsageId;
 extern const uint32_t Object_ToString_m3272709752_MetadataUsageId;
 extern const uint32_t Object_op_Equality_m1810815630_MetadataUsageId;
 extern const uint32_t Object_op_Inequality_m4071470834_MetadataUsageId;
+extern const uint32_t Object_Internal_InstantiateSingle_m4074556765_MetadataUsageId;
 extern const uint32_t Object__cctor_m2398773973_MetadataUsageId;
 extern const uint32_t Plane__ctor_m2890438515_MetadataUsageId;
 extern const uint32_t Plane_Raycast_m62370169_MetadataUsageId;
@@ -17993,6 +17999,10 @@ extern "C"  intptr_t Object_GetCachedPtr_m151292858 (Object_t631007953 * __this,
 extern "C"  String_t* Object_GetName_m4137306623 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___obj0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::SetName(UnityEngine.Object,System.String)
 extern "C"  void Object_SetName_m2427214136 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___obj0, String_t* ___name1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Object::CheckNullArgument(System.Object,System.String)
+extern "C"  void Object_CheckNullArgument_m4237608654 (RuntimeObject * __this /* static, unused */, RuntimeObject * ___arg0, String_t* ___message1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Object UnityEngine.Object::Internal_InstantiateSingle(UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+extern "C"  Object_t631007953 * Object_Internal_InstantiateSingle_m4074556765 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___data0, Vector3_t3722313464  ___pos1, Quaternion_t2301928331  ___rot2, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::Destroy(UnityEngine.Object,System.Single)
 extern "C"  void Object_Destroy_m3118546832 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___obj0, float ___t1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::DestroyImmediate(UnityEngine.Object,System.Boolean)
@@ -18001,6 +18011,8 @@ extern "C"  void Object_DestroyImmediate_m2288369078 (RuntimeObject * __this /* 
 extern "C"  ObjectU5BU5D_t1417781964* Object_FindObjectsOfType_m2295101757 (RuntimeObject * __this /* static, unused */, Type_t * ___type0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.Object::ToString(UnityEngine.Object)
 extern "C"  String_t* Object_ToString_m1579850521 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___obj0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Object UnityEngine.Object::Internal_InstantiateSingle_Injected(UnityEngine.Object,UnityEngine.Vector3&,UnityEngine.Quaternion&)
+extern "C"  Object_t631007953 * Object_Internal_InstantiateSingle_Injected_m3863904036 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___data0, Vector3_t3722313464 * ___pos1, Quaternion_t2301928331 * ___rot2, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Vector3::Normalize(UnityEngine.Vector3)
 extern "C"  Vector3_t3722313464  Vector3_Normalize_m2941713846 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Vector3::Dot(UnityEngine.Vector3,UnityEngine.Vector3)
@@ -24585,6 +24597,16 @@ extern "C"  String_t* Application_get_dataPath_m4232621142 (RuntimeObject * __th
 	static Application_get_dataPath_m4232621142_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Application_get_dataPath_m4232621142_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::get_dataPath()");
+	String_t* retVal = _il2cpp_icall_func();
+	return retVal;
+}
+// System.String UnityEngine.Application::get_streamingAssetsPath()
+extern "C"  String_t* Application_get_streamingAssetsPath_m1172141117 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	typedef String_t* (*Application_get_streamingAssetsPath_m1172141117_ftn) ();
+	static Application_get_streamingAssetsPath_m1172141117_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Application_get_streamingAssetsPath_m1172141117_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::get_streamingAssetsPath()");
 	String_t* retVal = _il2cpp_icall_func();
 	return retVal;
 }
@@ -42079,6 +42101,49 @@ extern "C"  void Object_set_name_m291480324 (Object_t631007953 * __this, String_
 		return;
 	}
 }
+// UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+extern "C"  Object_t631007953 * Object_Instantiate_m2682941528 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___original0, Vector3_t3722313464  ___position1, Quaternion_t2301928331  ___rotation2, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Object_Instantiate_m2682941528_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_t631007953 * V_0 = NULL;
+	{
+		Object_t631007953 * L_0 = ___original0;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_CheckNullArgument_m4237608654(NULL /*static, unused*/, L_0, _stringLiteral2475671027, /*hidden argument*/NULL);
+		Object_t631007953 * L_1 = ___original0;
+		if (!((ScriptableObject_t2528358522 *)IsInstClass((RuntimeObject*)L_1, ScriptableObject_t2528358522_il2cpp_TypeInfo_var)))
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentException_t132251570 * L_2 = (ArgumentException_t132251570 *)il2cpp_codegen_object_new(ArgumentException_t132251570_il2cpp_TypeInfo_var);
+		ArgumentException__ctor_m1312628991(L_2, _stringLiteral1766417507, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, NULL, Object_Instantiate_m2682941528_RuntimeMethod_var);
+	}
+
+IL_0022:
+	{
+		Object_t631007953 * L_3 = ___original0;
+		Vector3_t3722313464  L_4 = ___position1;
+		Quaternion_t2301928331  L_5 = ___rotation2;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_t631007953 * L_6 = Object_Internal_InstantiateSingle_m4074556765(NULL /*static, unused*/, L_3, L_4, L_5, /*hidden argument*/NULL);
+		V_0 = L_6;
+		goto IL_0030;
+	}
+
+IL_0030:
+	{
+		Object_t631007953 * L_7 = V_0;
+		return L_7;
+	}
+}
 // System.Void UnityEngine.Object::Destroy(UnityEngine.Object,System.Single)
 extern "C"  void Object_Destroy_m3118546832 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___obj0, float ___t1, const RuntimeMethod* method)
 {
@@ -42318,6 +42383,22 @@ extern "C"  Object_t631007953 * Object_Internal_CloneSingle_m1021157572 (Runtime
 	Object_t631007953 * retVal = _il2cpp_icall_func(___data0);
 	return retVal;
 }
+// UnityEngine.Object UnityEngine.Object::Internal_InstantiateSingle(UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+extern "C"  Object_t631007953 * Object_Internal_InstantiateSingle_m4074556765 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___data0, Vector3_t3722313464  ___pos1, Quaternion_t2301928331  ___rot2, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Object_Internal_InstantiateSingle_m4074556765_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Object_t631007953 * L_0 = ___data0;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_t631007953 * L_1 = Object_Internal_InstantiateSingle_Injected_m3863904036(NULL /*static, unused*/, L_0, (Vector3_t3722313464 *)(&___pos1), (Quaternion_t2301928331 *)(&___rot2), /*hidden argument*/NULL);
+		return L_1;
+	}
+}
 // System.String UnityEngine.Object::ToString(UnityEngine.Object)
 extern "C"  String_t* Object_ToString_m1579850521 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___obj0, const RuntimeMethod* method)
 {
@@ -42370,6 +42451,16 @@ extern "C"  void Object__cctor_m2398773973 (RuntimeObject * __this /* static, un
 		((Object_t631007953_StaticFields*)il2cpp_codegen_static_fields_for(Object_t631007953_il2cpp_TypeInfo_var))->set_OffsetOfInstanceIDInCPlusPlusObject_1((-1));
 		return;
 	}
+}
+// UnityEngine.Object UnityEngine.Object::Internal_InstantiateSingle_Injected(UnityEngine.Object,UnityEngine.Vector3&,UnityEngine.Quaternion&)
+extern "C"  Object_t631007953 * Object_Internal_InstantiateSingle_Injected_m3863904036 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___data0, Vector3_t3722313464 * ___pos1, Quaternion_t2301928331 * ___rot2, const RuntimeMethod* method)
+{
+	typedef Object_t631007953 * (*Object_Internal_InstantiateSingle_Injected_m3863904036_ftn) (Object_t631007953 *, Vector3_t3722313464 *, Quaternion_t2301928331 *);
+	static Object_Internal_InstantiateSingle_Injected_m3863904036_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Object_Internal_InstantiateSingle_Injected_m3863904036_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Object::Internal_InstantiateSingle_Injected(UnityEngine.Object,UnityEngine.Vector3&,UnityEngine.Quaternion&)");
+	Object_t631007953 * retVal = _il2cpp_icall_func(___data0, ___pos1, ___rot2);
+	return retVal;
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

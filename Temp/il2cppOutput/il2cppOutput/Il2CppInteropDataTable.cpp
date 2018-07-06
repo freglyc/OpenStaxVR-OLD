@@ -285,6 +285,14 @@ extern "C" void SkeletonBone_t4134054672_marshal_pinvoke(void* managedStructure,
 extern "C" void SkeletonBone_t4134054672_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void SkeletonBone_t4134054672_marshal_pinvoke_cleanup(void* marshaledStructure);
 extern const RuntimeType SkeletonBone_t4134054672_0_0_0;
+extern "C" void AssetBundleCreateRequest_t3119663542_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void AssetBundleCreateRequest_t3119663542_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void AssetBundleCreateRequest_t3119663542_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const RuntimeType AssetBundleCreateRequest_t3119663542_0_0_0;
+extern "C" void AssetBundleRequest_t699759206_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void AssetBundleRequest_t699759206_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void AssetBundleRequest_t699759206_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const RuntimeType AssetBundleRequest_t699759206_0_0_0;
 extern "C" void DelegatePInvokeWrapper_PCMReaderCallback_t1677636661();
 extern const RuntimeType PCMReaderCallback_t1677636661_0_0_0;
 extern "C" void DelegatePInvokeWrapper_PCMSetPositionCallback_t1059417452();
@@ -489,7 +497,7 @@ extern "C" void DelegatePInvokeWrapper_OnExceptionCallback_t1696428116();
 extern const RuntimeType OnExceptionCallback_t1696428116_0_0_0;
 extern "C" void DelegatePInvokeWrapper_OnVideoEventCallback_t2376626694();
 extern const RuntimeType OnVideoEventCallback_t2376626694_0_0_0;
-extern Il2CppInteropData g_Il2CppInteropData[143] = 
+extern Il2CppInteropData g_Il2CppInteropData[145] = 
 {
 	{ NULL, Context_t1744531130_marshal_pinvoke, Context_t1744531130_marshal_pinvoke_back, Context_t1744531130_marshal_pinvoke_cleanup, NULL, NULL, &Context_t1744531130_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Context */,
 	{ NULL, Escape_t3294788190_marshal_pinvoke, Escape_t3294788190_marshal_pinvoke_back, Escape_t3294788190_marshal_pinvoke_cleanup, NULL, NULL, &Escape_t3294788190_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Escape */,
@@ -567,6 +575,8 @@ extern Il2CppInteropData g_Il2CppInteropData[143] =
 	{ NULL, AnimatorTransitionInfo_t2534804151_marshal_pinvoke, AnimatorTransitionInfo_t2534804151_marshal_pinvoke_back, AnimatorTransitionInfo_t2534804151_marshal_pinvoke_cleanup, NULL, NULL, &AnimatorTransitionInfo_t2534804151_0_0_0 } /* UnityEngine.AnimatorTransitionInfo */,
 	{ NULL, HumanBone_t2465339518_marshal_pinvoke, HumanBone_t2465339518_marshal_pinvoke_back, HumanBone_t2465339518_marshal_pinvoke_cleanup, NULL, NULL, &HumanBone_t2465339518_0_0_0 } /* UnityEngine.HumanBone */,
 	{ NULL, SkeletonBone_t4134054672_marshal_pinvoke, SkeletonBone_t4134054672_marshal_pinvoke_back, SkeletonBone_t4134054672_marshal_pinvoke_cleanup, NULL, NULL, &SkeletonBone_t4134054672_0_0_0 } /* UnityEngine.SkeletonBone */,
+	{ NULL, AssetBundleCreateRequest_t3119663542_marshal_pinvoke, AssetBundleCreateRequest_t3119663542_marshal_pinvoke_back, AssetBundleCreateRequest_t3119663542_marshal_pinvoke_cleanup, NULL, NULL, &AssetBundleCreateRequest_t3119663542_0_0_0 } /* UnityEngine.AssetBundleCreateRequest */,
+	{ NULL, AssetBundleRequest_t699759206_marshal_pinvoke, AssetBundleRequest_t699759206_marshal_pinvoke_back, AssetBundleRequest_t699759206_marshal_pinvoke_cleanup, NULL, NULL, &AssetBundleRequest_t699759206_0_0_0 } /* UnityEngine.AssetBundleRequest */,
 	{ DelegatePInvokeWrapper_PCMReaderCallback_t1677636661, NULL, NULL, NULL, NULL, NULL, &PCMReaderCallback_t1677636661_0_0_0 } /* UnityEngine.AudioClip/PCMReaderCallback */,
 	{ DelegatePInvokeWrapper_PCMSetPositionCallback_t1059417452, NULL, NULL, NULL, NULL, NULL, &PCMSetPositionCallback_t1059417452_0_0_0 } /* UnityEngine.AudioClip/PCMSetPositionCallback */,
 	{ DelegatePInvokeWrapper_AudioConfigurationChangeHandler_t2089929874, NULL, NULL, NULL, NULL, NULL, &AudioConfigurationChangeHandler_t2089929874_0_0_0 } /* UnityEngine.AudioSettings/AudioConfigurationChangeHandler */,

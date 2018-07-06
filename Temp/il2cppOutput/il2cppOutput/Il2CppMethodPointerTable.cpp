@@ -7649,6 +7649,7 @@ extern "C" void Application_get_isPlaying_m100394690 ();
 extern "C" void Application_get_isEditor_m857789090 ();
 extern "C" void Application_get_platform_m2150679437 ();
 extern "C" void Application_get_dataPath_m4232621142 ();
+extern "C" void Application_get_streamingAssetsPath_m1172141117 ();
 extern "C" void Application_CallLogCallback_m255562505 ();
 extern "C" void Application_Internal_ApplicationWantsToQuit_m2059931957 ();
 extern "C" void Application_Internal_ApplicationQuit_m2936209313 ();
@@ -8226,6 +8227,7 @@ extern "C" void Object_IsNativeObjectAlive_m3095908075 ();
 extern "C" void Object_GetCachedPtr_m151292858 ();
 extern "C" void Object_get_name_m4211327027 ();
 extern "C" void Object_set_name_m291480324 ();
+extern "C" void Object_Instantiate_m2682941528 ();
 extern "C" void Object_Destroy_m3118546832 ();
 extern "C" void Object_Destroy_m565254235 ();
 extern "C" void Object_DestroyImmediate_m2288369078 ();
@@ -8239,11 +8241,13 @@ extern "C" void Object_ToString_m3272709752 ();
 extern "C" void Object_op_Equality_m1810815630 ();
 extern "C" void Object_op_Inequality_m4071470834 ();
 extern "C" void Object_Internal_CloneSingle_m1021157572 ();
+extern "C" void Object_Internal_InstantiateSingle_m4074556765 ();
 extern "C" void Object_ToString_m1579850521 ();
 extern "C" void Object_GetName_m4137306623 ();
 extern "C" void Object_SetName_m2427214136 ();
 extern "C" void Object_FindObjectFromInstanceID_m235838713 ();
 extern "C" void Object__cctor_m2398773973 ();
+extern "C" void Object_Internal_InstantiateSingle_Injected_m3863904036 ();
 extern "C" void Plane__ctor_m2890438515_AdjustorThunk ();
 extern "C" void Plane_Raycast_m62370169_AdjustorThunk ();
 extern "C" void Plane_ToString_m1879648265_AdjustorThunk ();
@@ -8612,6 +8616,7 @@ extern "C" void Transform_InverseTransformPoint_m1343916000 ();
 extern "C" void Transform_INTERNAL_CALL_InverseTransformPoint_m821776309 ();
 extern "C" void Transform_get_childCount_m3145433196 ();
 extern "C" void Transform_SetAsFirstSibling_m253439912 ();
+extern "C" void Transform_SetSiblingIndex_m1077399982 ();
 extern "C" void Transform_GetSiblingIndex_m798637244 ();
 extern "C" void Transform_get_lossyScale_m465496651 ();
 extern "C" void Transform_INTERNAL_get_lossyScale_m4223921741 ();
@@ -8824,6 +8829,14 @@ extern "C" void OnOverrideControllerDirtyCallback__ctor_m2479189580 ();
 extern "C" void OnOverrideControllerDirtyCallback_Invoke_m764065723 ();
 extern "C" void OnOverrideControllerDirtyCallback_BeginInvoke_m3152352859 ();
 extern "C" void OnOverrideControllerDirtyCallback_EndInvoke_m2432606376 ();
+extern "C" void AssetBundle__ctor_m2978938710 ();
+extern "C" void AssetBundle_LoadFromFile_m3926242066 ();
+extern "C" void AssetBundle_LoadFromFile_m2929520859 ();
+extern "C" void AssetBundle_LoadAsset_m2067452822 ();
+extern "C" void AssetBundle_LoadAsset_Internal_m1379095211 ();
+extern "C" void AssetBundle_LoadAssetWithSubAssets_Internal_m1019314507 ();
+extern "C" void AssetBundle_LoadAllAssets_m1873646134 ();
+extern "C" void AssetBundle_Unload_m4049809163 ();
 extern "C" void AudioClipPlayable_GetHandle_m1762771314_AdjustorThunk ();
 extern "C" void AudioClipPlayable_Equals_m3705880618_AdjustorThunk ();
 extern "C" void AudioMixer_FindMatchingGroups_m3428816351 ();
@@ -11251,6 +11264,16 @@ extern "C" void ValueProperty_IsValid_m3724034537 ();
 extern "C" void AutoSaveButton__ctor_m3410138271 ();
 extern "C" void AutoSaveButton_SetGazedAt_m2343475568 ();
 extern "C" void AutoSaveButton_Update_m2855315779 ();
+extern "C" void Book__ctor_m3570636227 ();
+extern "C" void Book_TotalPageCount_m1247474715 ();
+extern "C" void Book_LoadBundle_m1538355664 ();
+extern "C" void Book_InstantiateObject_m1492800521 ();
+extern "C" void Book_UpdatePages_m1492861865 ();
+extern "C" void Book_NextPage_m2918883880 ();
+extern "C" void Book_PreviousPage_m2307848261 ();
+extern "C" void Book_TurnNextPage_m610528172 ();
+extern "C" void Book_TurnBackPage_m1520487239 ();
+extern "C" void Book_Start_m1318566609 ();
 extern "C" void BookLogic__ctor_m33005647 ();
 extern "C" void BookLogic__ctor_m3931921108 ();
 extern "C" void BookLogic_get_CurrentPage_m3196176852 ();
@@ -11281,6 +11304,14 @@ extern "C" void BookMarkButton_SetGazedAt_m1841412721 ();
 extern "C" void BookMarkButton_Update_m418852851 ();
 extern "C" void BookMarkButton_Hide_m3673532501 ();
 extern "C" void BookMarkButton_Start_m2033561423 ();
+extern "C" void BookOLD__ctor_m3142119305 ();
+extern "C" void BookOLD_LoadBundle_m3942163535 ();
+extern "C" void BookOLD_UpdatePages_m4164315114 ();
+extern "C" void BookOLD_DestoryPages_m3159177351 ();
+extern "C" void BookOLD_TotalPageCount_m3446849812 ();
+extern "C" void BookOLD_TurnNextPage_m2401126607 ();
+extern "C" void BookOLD_TurnBackPage_m3527092070 ();
+extern "C" void BookOLD_Start_m1796822853 ();
 extern "C" void BookSettings__ctor_m2240411026 ();
 extern "C" void BookSettings_SetGazedAt_m2855112345 ();
 extern "C" void BookSettings_Update_m1286234552 ();
@@ -12201,6 +12232,8 @@ extern "C" void HideButton_Update_m1369714202 ();
 extern "C" void InstantPreviewHelper__ctor_m3264031024 ();
 extern "C" void KeyboardState__ctor_m1415457831 ();
 extern "C" void KeyboardState_CopyFrom_m4026192434 ();
+extern "C" void Loader__ctor_m2381677123 ();
+extern "C" void Loader_Start_m1332351137 ();
 extern "C" void MutablePose3D__ctor_m106723478 ();
 extern "C" void MutablePose3D_Set_m3142049060 ();
 extern "C" void MutablePose3D_Set_m1291130070 ();
@@ -12794,7 +12827,10 @@ extern "C" void SettingsToggle__ctor_m2276441916 ();
 extern "C" void SettingsToggle_SetGazedAt_m2160514190 ();
 extern "C" void SettingsToggle_Start_m2102669916 ();
 extern "C" void SettingsToggle_Update_m3748701006 ();
-extern const Il2CppMethodPointer g_MethodPointers[12775] = 
+extern "C" void TurnPageButton__ctor_m1429121235 ();
+extern "C" void TurnPageButton_SetGazedAt_m2952877344 ();
+extern "C" void TurnPageButton_Update_m3533931157 ();
+extern const Il2CppMethodPointer g_MethodPointers[12811] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -20426,6 +20462,7 @@ extern const Il2CppMethodPointer g_MethodPointers[12775] =
 	Application_get_isEditor_m857789090,
 	Application_get_platform_m2150679437,
 	Application_get_dataPath_m4232621142,
+	Application_get_streamingAssetsPath_m1172141117,
 	Application_CallLogCallback_m255562505,
 	Application_Internal_ApplicationWantsToQuit_m2059931957,
 	Application_Internal_ApplicationQuit_m2936209313,
@@ -21003,6 +21040,7 @@ extern const Il2CppMethodPointer g_MethodPointers[12775] =
 	Object_GetCachedPtr_m151292858,
 	Object_get_name_m4211327027,
 	Object_set_name_m291480324,
+	Object_Instantiate_m2682941528,
 	Object_Destroy_m3118546832,
 	Object_Destroy_m565254235,
 	Object_DestroyImmediate_m2288369078,
@@ -21016,11 +21054,13 @@ extern const Il2CppMethodPointer g_MethodPointers[12775] =
 	Object_op_Equality_m1810815630,
 	Object_op_Inequality_m4071470834,
 	Object_Internal_CloneSingle_m1021157572,
+	Object_Internal_InstantiateSingle_m4074556765,
 	Object_ToString_m1579850521,
 	Object_GetName_m4137306623,
 	Object_SetName_m2427214136,
 	Object_FindObjectFromInstanceID_m235838713,
 	Object__cctor_m2398773973,
+	Object_Internal_InstantiateSingle_Injected_m3863904036,
 	Plane__ctor_m2890438515_AdjustorThunk,
 	Plane_Raycast_m62370169_AdjustorThunk,
 	Plane_ToString_m1879648265_AdjustorThunk,
@@ -21389,6 +21429,7 @@ extern const Il2CppMethodPointer g_MethodPointers[12775] =
 	Transform_INTERNAL_CALL_InverseTransformPoint_m821776309,
 	Transform_get_childCount_m3145433196,
 	Transform_SetAsFirstSibling_m253439912,
+	Transform_SetSiblingIndex_m1077399982,
 	Transform_GetSiblingIndex_m798637244,
 	Transform_get_lossyScale_m465496651,
 	Transform_INTERNAL_get_lossyScale_m4223921741,
@@ -21601,6 +21642,14 @@ extern const Il2CppMethodPointer g_MethodPointers[12775] =
 	OnOverrideControllerDirtyCallback_Invoke_m764065723,
 	OnOverrideControllerDirtyCallback_BeginInvoke_m3152352859,
 	OnOverrideControllerDirtyCallback_EndInvoke_m2432606376,
+	AssetBundle__ctor_m2978938710,
+	AssetBundle_LoadFromFile_m3926242066,
+	AssetBundle_LoadFromFile_m2929520859,
+	AssetBundle_LoadAsset_m2067452822,
+	AssetBundle_LoadAsset_Internal_m1379095211,
+	AssetBundle_LoadAssetWithSubAssets_Internal_m1019314507,
+	AssetBundle_LoadAllAssets_m1873646134,
+	AssetBundle_Unload_m4049809163,
 	AudioClipPlayable_GetHandle_m1762771314_AdjustorThunk,
 	AudioClipPlayable_Equals_m3705880618_AdjustorThunk,
 	AudioMixer_FindMatchingGroups_m3428816351,
@@ -24028,6 +24077,16 @@ extern const Il2CppMethodPointer g_MethodPointers[12775] =
 	AutoSaveButton__ctor_m3410138271,
 	AutoSaveButton_SetGazedAt_m2343475568,
 	AutoSaveButton_Update_m2855315779,
+	Book__ctor_m3570636227,
+	Book_TotalPageCount_m1247474715,
+	Book_LoadBundle_m1538355664,
+	Book_InstantiateObject_m1492800521,
+	Book_UpdatePages_m1492861865,
+	Book_NextPage_m2918883880,
+	Book_PreviousPage_m2307848261,
+	Book_TurnNextPage_m610528172,
+	Book_TurnBackPage_m1520487239,
+	Book_Start_m1318566609,
 	BookLogic__ctor_m33005647,
 	BookLogic__ctor_m3931921108,
 	BookLogic_get_CurrentPage_m3196176852,
@@ -24058,6 +24117,14 @@ extern const Il2CppMethodPointer g_MethodPointers[12775] =
 	BookMarkButton_Update_m418852851,
 	BookMarkButton_Hide_m3673532501,
 	BookMarkButton_Start_m2033561423,
+	BookOLD__ctor_m3142119305,
+	BookOLD_LoadBundle_m3942163535,
+	BookOLD_UpdatePages_m4164315114,
+	BookOLD_DestoryPages_m3159177351,
+	BookOLD_TotalPageCount_m3446849812,
+	BookOLD_TurnNextPage_m2401126607,
+	BookOLD_TurnBackPage_m3527092070,
+	BookOLD_Start_m1796822853,
 	BookSettings__ctor_m2240411026,
 	BookSettings_SetGazedAt_m2855112345,
 	BookSettings_Update_m1286234552,
@@ -24978,6 +25045,8 @@ extern const Il2CppMethodPointer g_MethodPointers[12775] =
 	InstantPreviewHelper__ctor_m3264031024,
 	KeyboardState__ctor_m1415457831,
 	KeyboardState_CopyFrom_m4026192434,
+	Loader__ctor_m2381677123,
+	Loader_Start_m1332351137,
 	MutablePose3D__ctor_m106723478,
 	MutablePose3D_Set_m3142049060,
 	MutablePose3D_Set_m1291130070,
@@ -25571,4 +25640,7 @@ extern const Il2CppMethodPointer g_MethodPointers[12775] =
 	SettingsToggle_SetGazedAt_m2160514190,
 	SettingsToggle_Start_m2102669916,
 	SettingsToggle_Update_m3748701006,
+	TurnPageButton__ctor_m1429121235,
+	TurnPageButton_SetGazedAt_m2952877344,
+	TurnPageButton_Update_m3533931157,
 };

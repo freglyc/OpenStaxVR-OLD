@@ -152,8 +152,8 @@ extern const uint32_t NativeUpdateCallback_BeginInvoke_m1903744170_MetadataUsage
 
 
 
-#ifndef U3CMODULEU3E_T692745536_H
-#define U3CMODULEU3E_T692745536_H
+#ifndef U3CMODULEU3E_T692745537_H
+#define U3CMODULEU3E_T692745537_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -161,7 +161,7 @@ extern const uint32_t NativeUpdateCallback_BeginInvoke_m1903744170_MetadataUsage
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t692745536 
+struct  U3CModuleU3E_t692745537 
 {
 public:
 
@@ -171,7 +171,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T692745536_H
+#endif // U3CMODULEU3E_T692745537_H
 #ifndef RUNTIMEOBJECT_H
 #define RUNTIMEOBJECT_H
 #ifdef __clang__

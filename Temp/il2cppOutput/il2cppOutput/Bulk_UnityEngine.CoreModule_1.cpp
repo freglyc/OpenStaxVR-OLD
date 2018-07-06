@@ -15443,6 +15443,15 @@ extern "C"  void Transform_SetAsFirstSibling_m253439912 (Transform_t3600365921 *
 	_il2cpp_icall_func = (Transform_SetAsFirstSibling_m253439912_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::SetAsFirstSibling()");
 	_il2cpp_icall_func(__this);
 }
+// System.Void UnityEngine.Transform::SetSiblingIndex(System.Int32)
+extern "C"  void Transform_SetSiblingIndex_m1077399982 (Transform_t3600365921 * __this, int32_t ___index0, const RuntimeMethod* method)
+{
+	typedef void (*Transform_SetSiblingIndex_m1077399982_ftn) (Transform_t3600365921 *, int32_t);
+	static Transform_SetSiblingIndex_m1077399982_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Transform_SetSiblingIndex_m1077399982_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::SetSiblingIndex(System.Int32)");
+	_il2cpp_icall_func(__this, ___index0);
+}
 // System.Int32 UnityEngine.Transform::GetSiblingIndex()
 extern "C"  int32_t Transform_GetSiblingIndex_m798637244 (Transform_t3600365921 * __this, const RuntimeMethod* method)
 {

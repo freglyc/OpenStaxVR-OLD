@@ -57,8 +57,8 @@ extern const uint32_t InputTracking__cctor_m2794325493_MetadataUsageId;
 
 
 
-#ifndef U3CMODULEU3E_T692745543_H
-#define U3CMODULEU3E_T692745543_H
+#ifndef U3CMODULEU3E_T692745544_H
+#define U3CMODULEU3E_T692745544_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -66,7 +66,7 @@ extern const uint32_t InputTracking__cctor_m2794325493_MetadataUsageId;
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t692745543 
+struct  U3CModuleU3E_t692745544 
 {
 public:
 
@@ -76,7 +76,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T692745543_H
+#endif // U3CMODULEU3E_T692745544_H
 #ifndef RUNTIMEOBJECT_H
 #define RUNTIMEOBJECT_H
 #ifdef __clang__

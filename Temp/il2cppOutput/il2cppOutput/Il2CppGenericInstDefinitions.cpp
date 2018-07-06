@@ -589,6 +589,7 @@ extern const Il2CppType UnityEvent_4_t3609672668_gp_0_0_0_0;
 extern const Il2CppType UnityEvent_4_t3609672668_gp_1_0_0_0;
 extern const Il2CppType UnityEvent_4_t3609672668_gp_2_0_0_0;
 extern const Il2CppType UnityEvent_4_t3609672668_gp_3_0_0_0;
+extern const Il2CppType AssetBundle_LoadAllAssets_m3947174591_gp_0_0_0_0;
 extern const Il2CppType CodedInputStream_ReadEnum_m1145898636_gp_0_0_0_0;
 extern const Il2CppType CodedInputStream_ReadMessageArray_m838996309_gp_0_0_0_0;
 extern const Il2CppType GeneratedBuilderLite_2_t3408238255_gp_0_0_0_0;
@@ -2005,6 +2006,8 @@ static const RuntimeType* GenInst_UnityEvent_3_t3206388141_gp_0_0_0_0_UnityEvent
 extern const Il2CppGenericInst GenInst_UnityEvent_3_t3206388141_gp_0_0_0_0_UnityEvent_3_t3206388141_gp_1_0_0_0_UnityEvent_3_t3206388141_gp_2_0_0_0 = { 3, GenInst_UnityEvent_3_t3206388141_gp_0_0_0_0_UnityEvent_3_t3206388141_gp_1_0_0_0_UnityEvent_3_t3206388141_gp_2_0_0_0_Types };
 static const RuntimeType* GenInst_UnityEvent_4_t3609672668_gp_0_0_0_0_UnityEvent_4_t3609672668_gp_1_0_0_0_UnityEvent_4_t3609672668_gp_2_0_0_0_UnityEvent_4_t3609672668_gp_3_0_0_0_Types[] = { (&UnityEvent_4_t3609672668_gp_0_0_0_0), (&UnityEvent_4_t3609672668_gp_1_0_0_0), (&UnityEvent_4_t3609672668_gp_2_0_0_0), (&UnityEvent_4_t3609672668_gp_3_0_0_0) };
 extern const Il2CppGenericInst GenInst_UnityEvent_4_t3609672668_gp_0_0_0_0_UnityEvent_4_t3609672668_gp_1_0_0_0_UnityEvent_4_t3609672668_gp_2_0_0_0_UnityEvent_4_t3609672668_gp_3_0_0_0 = { 4, GenInst_UnityEvent_4_t3609672668_gp_0_0_0_0_UnityEvent_4_t3609672668_gp_1_0_0_0_UnityEvent_4_t3609672668_gp_2_0_0_0_UnityEvent_4_t3609672668_gp_3_0_0_0_Types };
+static const RuntimeType* GenInst_AssetBundle_LoadAllAssets_m3947174591_gp_0_0_0_0_Types[] = { (&AssetBundle_LoadAllAssets_m3947174591_gp_0_0_0_0) };
+extern const Il2CppGenericInst GenInst_AssetBundle_LoadAllAssets_m3947174591_gp_0_0_0_0 = { 1, GenInst_AssetBundle_LoadAllAssets_m3947174591_gp_0_0_0_0_Types };
 static const RuntimeType* GenInst_CodedInputStream_ReadEnum_m1145898636_gp_0_0_0_0_Types[] = { (&CodedInputStream_ReadEnum_m1145898636_gp_0_0_0_0) };
 extern const Il2CppGenericInst GenInst_CodedInputStream_ReadEnum_m1145898636_gp_0_0_0_0 = { 1, GenInst_CodedInputStream_ReadEnum_m1145898636_gp_0_0_0_0_Types };
 static const RuntimeType* GenInst_CodedInputStream_ReadMessageArray_m838996309_gp_0_0_0_0_Types[] = { (&CodedInputStream_ReadMessageArray_m838996309_gp_0_0_0_0) };
@@ -2103,7 +2106,7 @@ static const RuntimeType* GenInst_KeyEvent_t1937114521_0_0_0_Types[] = { (&KeyEv
 extern const Il2CppGenericInst GenInst_KeyEvent_t1937114521_0_0_0 = { 1, GenInst_KeyEvent_t1937114521_0_0_0_Types };
 static const RuntimeType* GenInst_PhoneEvent_t1358418708_0_0_0_Types[] = { (&PhoneEvent_t1358418708_0_0_0) };
 extern const Il2CppGenericInst GenInst_PhoneEvent_t1358418708_0_0_0 = { 1, GenInst_PhoneEvent_t1358418708_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[733] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[734] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_Int32_t2950945753_0_0_0,
@@ -2789,6 +2792,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[733] =
 	&GenInst_UnityEvent_2_t477504786_gp_0_0_0_0_UnityEvent_2_t477504786_gp_1_0_0_0,
 	&GenInst_UnityEvent_3_t3206388141_gp_0_0_0_0_UnityEvent_3_t3206388141_gp_1_0_0_0_UnityEvent_3_t3206388141_gp_2_0_0_0,
 	&GenInst_UnityEvent_4_t3609672668_gp_0_0_0_0_UnityEvent_4_t3609672668_gp_1_0_0_0_UnityEvent_4_t3609672668_gp_2_0_0_0_UnityEvent_4_t3609672668_gp_3_0_0_0,
+	&GenInst_AssetBundle_LoadAllAssets_m3947174591_gp_0_0_0_0,
 	&GenInst_CodedInputStream_ReadEnum_m1145898636_gp_0_0_0_0,
 	&GenInst_CodedInputStream_ReadMessageArray_m838996309_gp_0_0_0_0,
 	&GenInst_GeneratedBuilderLite_2_t3408238255_gp_0_0_0_0_GeneratedBuilderLite_2_t3408238255_gp_1_0_0_0,

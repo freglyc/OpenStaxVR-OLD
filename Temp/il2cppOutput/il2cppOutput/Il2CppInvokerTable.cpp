@@ -25983,6 +25983,20 @@ void* RuntimeInvoker_OperatingSystemFamily_t1868066375 (Il2CppMethodPointer meth
 	return Box(il2cpp_codegen_class_from_type (il2cpp_codegen_method_return_type(methodMetadata)), &ret);
 }
 
+void* RuntimeInvoker_RuntimeObject_RuntimeObject_Vector3_t3722313464_Quaternion_t2301928331 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef RuntimeObject * (*Func)(void* obj, RuntimeObject * p1, Vector3_t3722313464  p2, Quaternion_t2301928331  p3, const RuntimeMethod* method);
+	RuntimeObject * ret = ((Func)methodPointer)(obj, (RuntimeObject *)args[0], *((Vector3_t3722313464 *)args[1]), *((Quaternion_t2301928331 *)args[2]), methodMetadata);
+	return ret;
+}
+
+void* RuntimeInvoker_RuntimeObject_RuntimeObject_Vector3U26_t3464235976_QuaternionU26_t651104941 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef RuntimeObject * (*Func)(void* obj, RuntimeObject * p1, Vector3_t3722313464 * p2, Quaternion_t2301928331 * p3, const RuntimeMethod* method);
+	RuntimeObject * ret = ((Func)methodPointer)(obj, (RuntimeObject *)args[0], (Vector3_t3722313464 *)args[1], (Quaternion_t2301928331 *)args[2], methodMetadata);
+	return ret;
+}
+
 void* RuntimeInvoker_PersistentListenerMode_t232255230 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
 {
 	typedef int32_t (*Func)(void* obj, const RuntimeMethod* method);
@@ -26373,6 +26387,13 @@ void* RuntimeInvoker_Boolean_t97287965_AnimatorControllerPlayable_t1015767841 (I
 	typedef bool (*Func)(void* obj, AnimatorControllerPlayable_t1015767841  p1, const RuntimeMethod* method);
 	bool ret = ((Func)methodPointer)(obj, *((AnimatorControllerPlayable_t1015767841 *)args[0]), methodMetadata);
 	return Box(il2cpp_codegen_class_from_type (il2cpp_codegen_method_return_type(methodMetadata)), &ret);
+}
+
+void* RuntimeInvoker_RuntimeObject_RuntimeObject_Int32_t2950945753_Int64_t3736567304 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef RuntimeObject * (*Func)(void* obj, RuntimeObject * p1, int32_t p2, int64_t p3, const RuntimeMethod* method);
+	RuntimeObject * ret = ((Func)methodPointer)(obj, (RuntimeObject *)args[0], *((int32_t*)args[1]), *((int64_t*)args[2]), methodMetadata);
+	return ret;
 }
 
 void* RuntimeInvoker_AudioConfiguration_t4040042187 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
@@ -32521,7 +32542,7 @@ void* RuntimeInvoker_RuntimeObject_FloatTween_t1274330004 (Il2CppMethodPointer m
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[1894] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[1897] = 
 {
 	RuntimeInvoker_Void_t1185182177,
 	RuntimeInvoker_Boolean_t97287965_RuntimeObject,
@@ -33483,6 +33504,8 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1894] =
 	RuntimeInvoker_Boolean_t97287965_Rect_t2360479859_Rect_t2360479859,
 	RuntimeInvoker_Void_t1185182177_RuntimeObject_StringU26_t181565287_StringU26_t181565287,
 	RuntimeInvoker_OperatingSystemFamily_t1868066375,
+	RuntimeInvoker_RuntimeObject_RuntimeObject_Vector3_t3722313464_Quaternion_t2301928331,
+	RuntimeInvoker_RuntimeObject_RuntimeObject_Vector3U26_t3464235976_QuaternionU26_t651104941,
 	RuntimeInvoker_PersistentListenerMode_t232255230,
 	RuntimeInvoker_Vector2_t2156229523_Vector2_t2156229523_Vector2_t2156229523_Single_t1397266774,
 	RuntimeInvoker_Vector2_t2156229523_Vector2_t2156229523_Vector2_t2156229523,
@@ -33539,6 +33562,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1894] =
 	RuntimeInvoker_Boolean_t97287965_AnimationMotionXToDeltaPlayable_t272231551,
 	RuntimeInvoker_Boolean_t97287965_AnimationOffsetPlayable_t2887420414,
 	RuntimeInvoker_Boolean_t97287965_AnimatorControllerPlayable_t1015767841,
+	RuntimeInvoker_RuntimeObject_RuntimeObject_Int32_t2950945753_Int64_t3736567304,
 	RuntimeInvoker_AudioConfiguration_t4040042187,
 	RuntimeInvoker_Void_t1185182177_AudioConfigurationU26_t477163885,
 	RuntimeInvoker_RuntimeObject_SByte_t1669577662_RuntimeObject_RuntimeObject,

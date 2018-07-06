@@ -326,6 +326,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_dataPath();
 		Register_UnityEngine_Application_get_dataPath();
 
+		//System.String UnityEngine.Application::get_streamingAssetsPath()
+		void Register_UnityEngine_Application_get_streamingAssetsPath();
+		Register_UnityEngine_Application_get_streamingAssetsPath();
+
 		//System.Void UnityEngine.Application::Quit()
 		void Register_UnityEngine_Application_Quit();
 		Register_UnityEngine_Application_Quit();
@@ -335,6 +339,26 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Application_get_platform();
 
 	//End Registrations for type : UnityEngine.Application
+
+	//Start Registrations for type : UnityEngine.AssetBundle
+
+		//System.Void UnityEngine.AssetBundle::Unload(System.Boolean)
+		void Register_UnityEngine_AssetBundle_Unload();
+		Register_UnityEngine_AssetBundle_Unload();
+
+		//UnityEngine.AssetBundle UnityEngine.AssetBundle::LoadFromFile(System.String,System.UInt32,System.UInt64)
+		void Register_UnityEngine_AssetBundle_LoadFromFile();
+		Register_UnityEngine_AssetBundle_LoadFromFile();
+
+		//UnityEngine.Object UnityEngine.AssetBundle::LoadAsset_Internal(System.String,System.Type)
+		void Register_UnityEngine_AssetBundle_LoadAsset_Internal();
+		Register_UnityEngine_AssetBundle_LoadAsset_Internal();
+
+		//UnityEngine.Object[] UnityEngine.AssetBundle::LoadAssetWithSubAssets_Internal(System.String,System.Type)
+		void Register_UnityEngine_AssetBundle_LoadAssetWithSubAssets_Internal();
+		Register_UnityEngine_AssetBundle_LoadAssetWithSubAssets_Internal();
+
+	//End Registrations for type : UnityEngine.AssetBundle
 
 	//Start Registrations for type : UnityEngine.AsyncOperation
 
@@ -1642,6 +1666,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Object_Internal_CloneSingle();
 		Register_UnityEngine_Object_Internal_CloneSingle();
 
+		//UnityEngine.Object UnityEngine.Object::Internal_InstantiateSingle_Injected(UnityEngine.Object,UnityEngine.Vector3&,UnityEngine.Quaternion&)
+		void Register_UnityEngine_Object_Internal_InstantiateSingle_Injected();
+		Register_UnityEngine_Object_Internal_InstantiateSingle_Injected();
+
 		//UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type)
 		void Register_UnityEngine_Object_FindObjectsOfType();
 		Register_UnityEngine_Object_FindObjectsOfType();
@@ -2413,6 +2441,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform,System.Boolean)
 		void Register_UnityEngine_Transform_SetParent();
 		Register_UnityEngine_Transform_SetParent();
+
+		//System.Void UnityEngine.Transform::SetSiblingIndex(System.Int32)
+		void Register_UnityEngine_Transform_SetSiblingIndex();
+		Register_UnityEngine_Transform_SetSiblingIndex();
 
 		//System.Void UnityEngine.Transform::set_hasChanged(System.Boolean)
 		void Register_UnityEngine_Transform_set_hasChanged();
