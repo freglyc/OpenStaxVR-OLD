@@ -18,6 +18,7 @@ public class Book : MonoBehaviour
 
     public string bookChoices; // Allows you to choose which book
     private int _currentPage = 0;
+    private int _progress = 0;
     private AssetBundle _previousBundle;
     private AssetBundle _currentBundle;
     private AssetBundle _nextBundle;
@@ -97,6 +98,7 @@ public class Book : MonoBehaviour
     public void TurnNextPage()
     {
         _currentPage = NextPage(_currentPage);
+        SaveProgress();
 
         GameObject toDestroy = transform.GetChild(0).gameObject;
         Destroy(toDestroy);
@@ -113,6 +115,7 @@ public class Book : MonoBehaviour
     public void TurnBackPage()
     {
         _currentPage = PreviousPage(_currentPage);
+        SaveProgress();
 
         GameObject toDestroy = transform.GetChild(2).gameObject;
         Destroy(toDestroy);
@@ -128,6 +131,7 @@ public class Book : MonoBehaviour
     public void GoToPage(int pageNumber)
     {
         _currentPage = pageNumber;
+        SaveProgress();
 
         foreach(Transform child in transform)
         {
@@ -145,11 +149,68 @@ public class Book : MonoBehaviour
         InstantiateObject(2, _nextBundle, NextPage(_currentPage));
         UpdatePages();
     }
+    
+    /**
+     * Save progress.
+     */
+    private void SaveProgress()
+    {
+        _progress = _currentPage;
+        string currentDir = Directory.GetCurrentDirectory();
+        string fileName = "envStatus.txt";
+        string fullPath = currentDir + "/" + fileName;
+        string bookStatus = "Progress:" + _progress;
+        try
+        {
+            File.WriteAllText(fullPath, bookStatus);
+            Debug.Log("Saved!");
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Failed to save progress!");
+        }
+    }
+    
+    /*
+     * Load progress.
+     */
+    private void LoadProgress()
+    {
+        // The path of the txt file storing game status.
+        string currentDir = Directory.GetCurrentDirectory();
+        string fileName = "envStatus.txt";
+        string fullPath = currentDir + "/" + fileName;
+        try
+        {
+            int bookStatus;
+            // Try reading the progress.
+            if (!Int32.TryParse(File.ReadAllText(fullPath).Split(':')[1], out bookStatus))
+            {
+                // Reset everything.
+                _progress = 0;
+                _currentPage = 0;
+            }
+            else
+            {
+                // Reload game.
+                _progress = bookStatus;
+                _currentPage = _progress;
+            }
+        }
+        catch (Exception e)
+        {
+            // Create an empty file.
+            File.Create(fullPath);
+            _progress = 0;
+            _currentPage = 0;
+        }
+    }
 
 
     /* Checks for saved progress and displays pages */
     void Start()
     {
+        LoadProgress();
         _previousBundle = LoadBundle(PreviousPage(_currentPage));
         InstantiateObject(0, _previousBundle, PreviousPage(_currentPage));
         _currentBundle = LoadBundle(_currentPage);
