@@ -22,7 +22,8 @@ public class Book : MonoBehaviour
     private AssetBundle _previousBundle;
     private AssetBundle _currentBundle;
     private AssetBundle _nextBundle;
-    public int TotalPages = 5;
+    [SerializeField]
+    public int TotalPages;
 
     /* Returns the current number of pages loaded in the scene */
     private int TotalPageCount()
