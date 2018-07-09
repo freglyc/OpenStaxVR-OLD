@@ -131,8 +131,7 @@ public class Book : MonoBehaviour
     public void GoToPage(int pageNumber)
     {
         _currentPage = pageNumber;
-        
-        
+        SaveProgress();
 
         foreach(Transform child in transform)
         {
@@ -169,6 +168,41 @@ public class Book : MonoBehaviour
         catch (Exception e)
         {
             Debug.Log("Failed to save progress!");
+        }
+    }
+    
+    /*
+     * Load progress.
+     */
+    private void LoadProgress()
+    {
+        // The path of the txt file storing game status.
+        string currentDir = Directory.GetCurrentDirectory();
+        string fileName = "envStatus.txt";
+        string fullPath = currentDir + "/" + fileName;
+        try
+        {
+            int bookStatus;
+            // Try reading the progress.
+            if (!Int32.TryParse(File.ReadAllText(fullPath).Split(':')[1], out bookStatus))
+            {
+                // Reset everything.
+                _progress = 0;
+                _currentPage = 0;
+            }
+            else
+            {
+                // Reload game.
+                _progress = bookStatus;
+                _currentPage = _progress;
+            }
+        }
+        catch (Exception e)
+        {
+            // Create an empty file.
+            File.Create(fullPath);
+            _progress = 0;
+            _currentPage = 0;
         }
     }
 
