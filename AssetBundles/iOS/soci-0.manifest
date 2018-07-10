@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4017910657
+CRC: 2715857435
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ed9a132a33dab5bdfcbcfeeee4a9cea2
+    Hash: e30e4c7b893dc67ea3b61429342c07aa
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 248d02d51ddd16afb9a712867edb788a
+    Hash: 68ed2168e6b5e522bd9dff562f20e774
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -25,28 +25,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
-- Class: 65
-  Script: {instanceID: 0}
 Assets:
-- Assets/Soci-0/0004.jpg
-- Assets/Soci-0/5.prefab
-- Assets/Soci-0/0008.jpg
-- Assets/Soci-0/0003.jpg
-- Assets/Soci-0/0005.jpg
-- Assets/Soci-0/Materials/0005.mat
-- Assets/Soci-0/8.prefab
-- Assets/Soci-0/Materials/0009.mat
-- Assets/Soci-0/Materials/0003.mat
-- Assets/Soci-0/Materials/0006.mat
-- Assets/Soci-0/Materials/0004.mat
-- Assets/Soci-0/3.prefab
-- Assets/Soci-0/6.prefab
-- Assets/Soci-0/0009.jpg
-- Assets/Soci-0/4.prefab
-- Assets/Soci-0/Materials/0008.mat
-- Assets/Soci-0/Materials/0007.mat
-- Assets/Soci-0/0006.jpg
-- Assets/Soci-0/7.prefab
-- Assets/Soci-0/9.prefab
-- Assets/Soci-0/0007.jpg
+- Assets/ASSET BUNDLE PAGES/Materials/0000.mat
+- Assets/ASSET BUNDLE PAGES/0.prefab
+- Assets/ASSET BUNDLE PAGES/0000.jpg
 Dependencies: []
