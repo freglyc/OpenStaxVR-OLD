@@ -1,34 +1,10 @@
 ManifestFileVersion: 0
-CRC: 193259402
+CRC: 3127640655
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: test-0
+      Name: soci-0
       Dependencies: {}
     Info_1:
-      Name: test-1
-      Dependencies: {}
-    Info_2:
-      Name: test-2
-      Dependencies: {}
-    Info_3:
-      Name: test-4
-      Dependencies: {}
-    Info_4:
-      Name: test-3
-      Dependencies: {}
-    Info_5:
-      Name: test-5
-      Dependencies: {}
-    Info_6:
-      Name: test-6
-      Dependencies: {}
-    Info_7:
-      Name: test-7
-      Dependencies: {}
-    Info_8:
-      Name: test-8
-      Dependencies: {}
-    Info_9:
-      Name: test-9
+      Name: soci-1
       Dependencies: {}
