@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum NextBack{
-    next, back, goToPage
+    next, back
  }
 
 public class TurnPageButton : MonoBehaviour {
 
 	public NextBack dropdown;
-
-    public int goToPage;
 
 	// Whether the Google Cardboard user is gazing at this button.
     private bool _isLookedAt = false;
@@ -51,9 +49,6 @@ public class TurnPageButton : MonoBehaviour {
                 	case NextBack.back:
                 		book.TurnBackPage();
                 		break;
-                    case NextBack.goToPage:
-                        book.GoToPage(goToPage);
-                        break;
                 }
             }
         }
