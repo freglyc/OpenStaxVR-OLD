@@ -1,3 +1,5 @@
+***OUTDATED:** View up to date version [here](https://github.com/freglyc/OpenStaxVR)*
+
 # OpenStaxVR
 
 [OpenStax](https://openstax.org/) virtual reality book reader. Created in Unity 5. 
